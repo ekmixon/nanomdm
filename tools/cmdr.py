@@ -83,9 +83,9 @@ def rem_prof_subparser(parser):
 
 def simple_command_subparser(request_type, parser):
     new_parser = parser.add_parser(
-        request_type,
-        help=request_type + " MDM command",
+        request_type, help=f"{request_type} MDM command"
     )
+
     new_parser.set_defaults(func=simple_command(request_type))
     return new_parser
 
